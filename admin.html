@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Vero Chat Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="logo">
+            <span class="logo-icon">🤖</span>
+            <span class="logo-text">Vero Chat Assistant</span>
+        </div>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </header>
+    <main class="admin-main">
+        <div class="dashboard-container">
+            <h1>Admin Dashboard</h1>
+
+            <div class="filters-container">
+                <div class="filter-header">
+                    <span class="logo-icon">🔍</span>
+                    <h3>Filters</h3>
+                </div>
+                <div class="filter-fields">
+                    <div class="filter-field">
+                        <label for="filter-name">Name:</label>
+                        <input type="text" id="filter-name" placeholder="Filter Name...">
+                    </div>
+                    <div class="filter-field">
+                        <label for="filter-phone">Phone:</label>
+                        <input type="text" id="filter-phone" placeholder="Filter Phone...">
+                    </div>
+                    <div class="filter-field">
+                        <label for="filter-email">E-Mail:</label>
+                        <input type="text" id="filter-email" placeholder="Filter E-Mail...">
+                    </div>
+                    <div class="filter-field">
+                        <label for="filter-interest">Service Interest:</label>
+                        <input type="text" id="filter-interest" placeholder="Filter Service...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Service Interest</h3>
+                    <canvas id="service-interest-chart"></canvas>
+                </div>
+            </div>
+            <h2>Collected Client Information</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Service Interest</th>
+                            <th>Referral Source</th>
+                            <th>Submission Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="client-data">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
